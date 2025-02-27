@@ -7,6 +7,7 @@ rm -rf kernel/asus/sdm660/KernelSU-Next/docs
 
 rm -rf device/asus
 git clone --depth=1 https://github.com/electrolaboratory/common -b vic device/asus/sdm660-common
+git clone --depth=1 https://github.com/electrolaboratory/device -b vic device/asus/X00TD
 
 rm -rf vendor/asus
 git clone --depth=1 https://github.com/electrolaboratory/vendor_common -b vic vendor/asus/sdm660-common
