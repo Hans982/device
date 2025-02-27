@@ -158,7 +158,7 @@
     },
     {
       "Name": "DoubleTapToWake",
-      "Path": "/proc/touchpanel/double_tap_enable",
+      "Path": "/sys/kernel/touchpanel/dclicknode",
       "Values": [
         "0",
         "1"
