@@ -4,6 +4,8 @@ rm -rf kernel/asus/sdm660
 git clone --depth=1 --recursive https://github.com/Tiktodz/android_kernel_asus_sdm660 -b master kernel/asus/sdm660
 rm -rf kernel/asus/sdm660/KernelSU-Next/userspace
 
+sed -i 's/CONFIG_DEBUG_INFO=.*/CONFIG_DEBUG_INFO=n/g' kernel/asus/sdm660/arch/arm64/configs/asus/X00TD_defconfig
+
 rm -rf device/asus/sdm660-common
 git clone --depth=1 https://github.com/electrolaboratory/common -b v device/asus/sdm660-common
 
