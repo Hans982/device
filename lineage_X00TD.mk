@@ -16,7 +16,12 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 TARGET_DISABLE_EPPE := true
-WITH_GMS := false
+AXION_CAMERA_REAR_INFO := 13,16,5
+AXION_CAMERA_FRONT_INFO := 16
+AXION_MAINTAINER := Kyura
+AXION_PROCESSOR := Qualcomm®_Snapdragon™_636
+TARGET_DISABLE_EPPE := true
+TARGET_PREBUILT_BCR := false
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_X00TD
