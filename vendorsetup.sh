@@ -13,8 +13,8 @@ rm -rf vendor/asus
 git clone --depth=1 https://github.com/electrolaboratory/vendor_common -b v vendor/asus
 
 rm -rf vendor/lineage-priv/keys
-#git clone https://github.com/ardia-kun/vendor -b 14-backup sig && cp -R sig/* vendor/
-#rm -rf sig
+git clone https://github.com/ardia-kun/vendor -b 14-backup sig && cp -R sig/* vendor/
+rm -rf sig
 
 export BUILD_USER=queen
 export KBUILD_BUILD_USER=queen
