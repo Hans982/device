@@ -16,6 +16,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 TARGET_DISABLE_EPPE := true
+TARGET_INCLUDE_ACCORD := false
 WITH_GMS := false
 
 # Device identifier. This must come after all inclusions.
