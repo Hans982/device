@@ -5,16 +5,15 @@ git clone --depth=1 --recursive https://github.com/Tiktodz/android_kernel_asus_s
 rm -rf kernel/asus/sdm660/KernelSU-Next/userspace
 
 rm -rf device/asus/sdm660-common
-git clone https://github.com/Tiktodz/android_device_asus_sdm660-common-4.19 device/asus/sdm660-common
-cd device/asus/sdm660-common && git revert 56949d983dca547d91dffec95e1ec6c636b239c8 --no-edit
-cd ../../..
+git clone https://github.com/electrolaboratory/common -b base device/asus/sdm660-common
 
 rm -rf vendor/asus
 git clone --depth=1 https://github.com/electrolaboratory/vendor_common -b v vendor/asus
 
 rm -rf vendor/lineage-priv/keys
+rm -rf vendor/lineage/signing/keys
 mkdir -p vendor/lineage-priv/keys
-git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys/
+git clone https://github.com/electrolaboratory/public-keys vendor/lineage-priv/keys/
 
 export BUILD_USER=queen
 export KBUILD_BUILD_USER=queen
