@@ -9,20 +9,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Infinity-X stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Infinity-X stuff.
 TARGET_DISABLE_EPPE := true
-AXION_CAMERA_REAR_INFO := 13,16,5
-AXION_CAMERA_FRONT_INFO := 16
-AXION_MAINTAINER := Kyura
-AXION_PROCESSOR := Qualcomm®_Snapdragon™_636
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+INFINITY_BUILD_TYPE := UNOFFICIAL
+TARGET_SUPPORTS_BLUR := false
+WITH_GAPPS := false
+TARGET_SHIPS_FULL_GAPPS := false
+TARGET_BUILD_GOOGLE_TELEPHONY := false
+INFINITY_MAINTAINER := qǝuʞz
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_X00TD
+PRODUCT_NAME := infinity_X00TD
 PRODUCT_DEVICE := X00TD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone Max Pro M1
