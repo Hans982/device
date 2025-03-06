@@ -13,8 +13,9 @@ rm -rf vendor/asus
 git clone --depth=1 https://github.com/electrolaboratory/vendor_common -b v vendor/asus
 
 rm -rf vendor/lineage-priv/keys
+rm -rf vendor/lineage/signing/keys
 mkdir -p vendor/lineage-priv/keys
-git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys/
+git clone https://github.com/electrolaboratory/public-keys vendor/lineage-priv/keys/
 
 export BUILD_USER=queen
 export KBUILD_BUILD_USER=queen
