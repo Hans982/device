@@ -14,5 +14,8 @@ rm -rf vendor/lineage-priv/keys
 mkdir -p vendor/lineage-priv/keys
 git clone https://github.com/electrolaboratory/public-keys vendor/lineage-priv/keys/
 
+rm -rf vendor/gms
+git clone https://gitlab.com/dark.phnx12/vendor-gms-matrixx.git vendor/gms
+
 export KBUILD_BUILD_USER=queen
 export TZ=Asia/Jakarta
