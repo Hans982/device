@@ -10,7 +10,7 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Infinity-X stuff.
+# Inherit some common Alphadroid stuff.
 $(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
 # Inherit from X00TD device
@@ -58,7 +58,7 @@ ALPHA_BUILD_TYPE := Unofficial
 ALPHA_MAINTAINER := Hans982!
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := infinity_X00TD
+PRODUCT_NAME := alpha_X00TD
 PRODUCT_DEVICE := X00TD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone Max Pro M1
