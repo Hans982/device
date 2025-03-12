@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_X00TD.mk
+    $(LOCAL_DIR)/alpha_X00TD.mk
