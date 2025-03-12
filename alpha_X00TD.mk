@@ -11,21 +11,51 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Inherit some common Infinity-X stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Infinity-X stuff.
+# Alphadroid stuff.
+ALLOW_MISSING_DEPENDENCIES := true
 TARGET_DISABLE_EPPE := true
-TARGET_SUPPORTS_CALL_RECORDING := true
+BUILD_BROKEN_DUP_RULES := true
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
+
+# Device config
+TARGET_HAS_UDFPS := false
+TARGET_ENABLE_BLUR := false
+TARGET_EXCLUDES_AUDIOFX := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
-INFINITY_BUILD_TYPE := UNOFFICIAL
-TARGET_SUPPORTS_BLUR := false
-WITH_GAPPS := false
-TARGET_SHIPS_FULL_GAPPS := false
-TARGET_BUILD_GOOGLE_TELEPHONY := false
-INFINITY_MAINTAINER := qǝuʞz
+
+# Build config
+# TARGET_BUILD_PACKAGE options:
+# 1 - vanilla (default)
+# 2 - microg
+# 3 - gapps
+TARGET_BUILD_PACKAGE := 1
+
+# Launcher
+TARGET_INCLUDE_LAWNCHAIR := false
+
+# (valid only for GAPPS builds)
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
+TARGET_SUPPORTS_QUICK_TAP := false
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := false
+WITH_ADB_INSECURE := false
+
+# Extras
+TARGET_INCLUDE_RIMUSIC := true
+
+# Maintainer
+ALPHA_BUILD_TYPE := Unofficial
+ALPHA_MAINTAINER := Hans982!
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := infinity_X00TD
