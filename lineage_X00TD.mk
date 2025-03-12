@@ -17,6 +17,15 @@ TARGET_DISABLE_EPPE := true
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Matrixx
+MATRIXX_BATTERY := 5000mAh
+MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_CHIPSET := SDM660
+MATRIXX_DISPLAY := 1080x2400
+
+# To include Gapps 
+WITH_GMS := false
+
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
